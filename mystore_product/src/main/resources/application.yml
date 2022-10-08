@@ -1,0 +1,24 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mystore?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: mystoreproduct
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+  profiles:
+    include: feign
+
+mybatis:
+  # 配置MyBatis的xml配置文件路径
+   mapper-locations: classpath:mapper/*.xml
+    # 配置XML映射文件中指定的实体类别名路径
+    # type-aliases-package: com.example.demo3.pojo
+    # 开启驼峰uName自动映射到u_name
+    # map-underscore-to-camel-case: true
+

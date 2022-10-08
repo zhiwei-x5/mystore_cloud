@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mystore_detailed.mapper.ProductMapper">
+
+    <!-- 根据商品id查询商品详情：Product findById(Integer id) -->
+    <select id="findById" resultType="com.mystore.entity.Product">
+        SELECT
+            *
+        FROM
+            t_product
+        WHERE
+            id=#{id}
+    </select>
+</mapper>
